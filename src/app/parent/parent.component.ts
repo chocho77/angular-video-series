@@ -12,4 +12,8 @@ export class ParentComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  receiveMessage(msg: any) {
+    alert(msg);
+  }
+
 }
