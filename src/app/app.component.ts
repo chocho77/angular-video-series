@@ -8,6 +8,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 export class AppComponent implements OnInit, OnDestroy {
   title = 'angular-video-series';
   intervalSub: string | number | NodeJS.Timer | undefined;
+
   
   ngOnInit() {
     this.intervalSub = setInterval(()=>{
@@ -21,5 +22,12 @@ export class AppComponent implements OnInit, OnDestroy {
       clearInterval(this.intervalSub);
 
     }
+  }
+
+  getMin(a: number, b: number) {
+    if(a < b){
+      return a;
+    }
+    return b;
   }
 }
