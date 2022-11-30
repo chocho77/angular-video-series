@@ -9,7 +9,6 @@ export class ChildComponent implements OnInit {
   @Input()
   childMessage!: string;
   @Output() messageEvent = new EventEmitter<string>();
-  @Output() messageEvent1 = new EventEmitter<string>();
 
   constructor() {}
 
@@ -18,10 +17,6 @@ export class ChildComponent implements OnInit {
 
   sendMessage() {
     this.messageEvent.emit('Hello from child!');
-  }
-
-  sendMessage1() {
-    this.messageEvent1.emit('Hello from child!');
   }
 
 }
